@@ -13,6 +13,10 @@ class Backend extends CI_Controller{
 		$this->load->view('offers', $data);
 	}
 
+	function v_input(){
+		$this->load->view('v_input');
+	}
+
 	function index() {
 		$data['rute'] = $this->pesawat->tampil_data()->result();
 		$this->load->view('index', $data);
@@ -31,31 +35,31 @@ class Backend extends CI_Controller{
 				'price' => $price
 		);
 		$this->pesawat->input_data($data, 'rute');
-		redirect('insert/index');
+		redirect('backend/index');
 	}
 
 	function hapus($id){
 		$where = array('ruteid' => $id);
 		$this->pesawat->hapus_record($where, 'rute');
-		redirect('backend/index');
+		redirect('backend/tampil');
 	}
 
 	function edit_rute($id){
 		$where = array ('ruteid' => $id);
 		$data['rute'] = $this->pesawat->edit_datarute($where, 'rute')->result();
-		$this->load->view('index', $data);
+		$this->load->view('v_input', $data);
 	}
 
 	function update_rute(){
 		$ruteid = $this->input->post('ruteid');
 		$from = $this->input->post('from');
 		$to = $this->input->post('to');
-		$depart_on = $this->input->post('depart');
-		$price = $this->input->post('prices');
+		$depart_at = $this->input->post('depart');
+		$price = $this->input->post('price');
 		$data = array(
 			'rute_from' => $from,
 			'rute_to' => $to,
-			'depart_at' => $depart_on,
+			'depart_at' => $depart_at,
 			'price' => $price
 		);
 		$where = array(
@@ -63,8 +67,29 @@ class Backend extends CI_Controller{
 		);
 		$this->pesawat->update_datarute($where, $data, 'rute');
 		redirect('backend/tampil');
-	}
 
+	}
+	function tambah(){
+		$ruteid = $this->input->post('ruteid');
+		$rute_from = $this->input->post('rute_from');
+		$rute_to = $this->input->post('rute_to');
+		$depart_at = $this->input->post('depart_at');
+		$price = $this->input->post('price');
+		$transportid = $this->input->post('transportid');
+		$data = array(
+			'rute_from' => $rute_from,
+			'rute_to' => $rute_to,
+			'depart_at' => $depart_at,
+			'price' => $price,
+			'transportid' => $transportid
+		);
+		$where = array(
+			'ruteid' => $ruteid
+		);
+		$this->pesawat->tambah_data($where, $data, 'rute');
+		redirect('backend/tampil');	
+
+	}
 
 }
 

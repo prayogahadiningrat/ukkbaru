@@ -85,7 +85,9 @@
                   <div class="row"> <span class="left">Children</span>
                     <input type="text" class="input2" value="0"  onblur="if(this.value=='') this.value='0'" onFocus="if(this.value =='0' ) this.value=''">
                     <span class="pad_left1">(0-11 years)</span> </div>
-                  <div class="wrapper"> <span class="right relative"><a href="#" class="button1"><strong>Search</strong></a></span> <a href="#" class="link1"></a> </div>
+                  <div class="wrapper"> <span class="right relative"><a href="#" class="button1"><strong>Search</strong></a></span> <a href="#" class="link1">
+                    
+                  </a> </div>
                 </div>
               </form>
             </div>

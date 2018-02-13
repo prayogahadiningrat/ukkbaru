@@ -13,6 +13,7 @@
   </style>
 </head>
 <body>
+  <center><a href="<?php echo base_url('index.php/backend/v_input') ; ?>">Tambah Data</a></center>
   <table style="margin:20px auto;" border="1">
     <tr>
       <th>No</th>
