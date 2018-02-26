@@ -47,20 +47,21 @@ class Backend extends CI_Controller{
 	function edit_rute($id){
 		$where = array ('ruteid' => $id);
 		$data['rute'] = $this->pesawat->edit_datarute($where, 'rute')->result();
-		$this->load->view('v_input', $data);
+		$this->load->view('v_edit', $data);
 	}
 
 	function update_rute(){
+		
 		$ruteid = $this->input->post('ruteid');
-		$from = $this->input->post('from');
-		$to = $this->input->post('to');
-		$depart_at = $this->input->post('depart');
+		$rute_from = $this->input->post('rute_from');
+		$rute_to = $this->input->post('rute_to');
+		$depart_at = $this->input->post('depart_at');
 		$price = $this->input->post('price');
 		$data = array(
-			'rute_from' => $from,
-			'rute_to' => $to,
+			'rute_from' => $rute_from,
+			'rute_to' => $rute_to,
 			'depart_at' => $depart_at,
-			'price' => $price
+			'price' => $price,
 		);
 		$where = array(
 			'ruteid' => $ruteid
