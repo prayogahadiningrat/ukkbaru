@@ -10,7 +10,7 @@
       Admin Panel
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2018 <a href="#">JONFLIGHT</a>.</strong> Admin Panel.
+    <strong>Copyright &copy; 2018 <a href="#">Cathay Pacific</a>.</strong> Admin Panel.
   </footer>
 
   <!-- Control Sidebar -->

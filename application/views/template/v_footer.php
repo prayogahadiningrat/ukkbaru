@@ -8,7 +8,7 @@
 								<a target="blank" href="http://fb.com/fighter.cyber1"><i class="icon-facebook2"></i></a>
 								<a target="blank" href="http://instagram.com/haffjjj"><i class="icon-instagram"></i></a>
 							</p>
-							<p>Copyright 2018 YOGSFLIGHT. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://jondes.com/" target="_blank">YOGS</a></p>
+							<p>Copyright 2018 Cathay Pacific. All Rights Reserved. <br>Made </i> by <a href="http://jondes.com/" target="_blank">Prayoga Hadiningrat</a></p>
 						</div>
 					</div>
 				</div>
